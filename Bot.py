@@ -51,9 +51,6 @@ async def on_message(message):
     elif user_message.lower() == 'benim adım ne':
         await message.channel.send(f'senin takma adın {username}')
         return
-    elif user_message.lower() == 'ders başladı':
-        await  message.channel.send("DERSE KATILSANIZA!!")
-        return
     elif user_message.lower() == 'let me control':
         giris = input("Mesaj gönder: ")
         await message.channel.send(giris)
