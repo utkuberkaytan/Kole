@@ -1,8 +1,8 @@
 import discord
 import random
 import time
-nabercevap = ("iyiyim dememi mi bekliyon?!", "iyi sen?", "sizin emirlerinizden bıktığım için iyi değilim", "iyiyim sağol", "beni boşver sen nasılsın?", "İşimle gücümle uğraşıyom, sen?")
-kolecevap = ("Ne var?", "Noldu?","Efendim","Ne!?","Yav ne var!?","Ben burda yokuuum.", "Bulaşma bana!")
+nabercevap = ("1", "2", "3", "4", "5", "6")
+kolecevap = ("1", "2","3","4","5","6", "7")
 duyuru = str("YOUR ANOUNCEMENT HERE")
 
 
@@ -55,12 +55,7 @@ async def on_message(message):
         giris = input("Mesaj gönder: ")
         await message.channel.send(giris)
         return
-    elif user_message.lower() == 'sanane' or user_message.lower() == 'sanane lan köle':
-        ozur = (f"Affet {username} abii", "tamam tamam sustum", f"Sustum {username} abi", "tamam tamam")
-        mesaj=random.choice(ozur)
-        await message.channel.send(mesaj)
-        return
-    elif user_message.lower() == 'bana abi de':
+    elif user_message.lower() == 'bana x de':
         await message.channel.send(f'Sana (şimdilik) ismin dışında bir isimle hitap edemem maalesef {username}')
         return
     elif user_message.lower() == 'manage functions':
@@ -75,9 +70,6 @@ async def on_message(message):
     elif username != "YOUR USERNAME" and user_message.lower() == "disconnect":
         await message.channel.send(f"You are not authorized for this transaction {username}")
         return 
-    elif user_message.lower() == '!dayak':
-        await  message.channel.send("Aghhh!!")
-        return
     elif user_message.lower() == "!duyuru":
         await message.channel.send(duyuru)
         return
